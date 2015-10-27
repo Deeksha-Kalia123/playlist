@@ -1,0 +1,33 @@
+<h1>
+	<center>
+	Playlists <small> Listing </small>
+	</center>
+</h1>
+
+<%=link_to "New", new_playlist_path%>
+	
+<div class="container">
+	
+		<%@playlists.each do |playlist|%>
+			<ul class="playlist_names">
+			  <li>
+			    <%=playlist.name%>
+			  </li>
+			<ul class= "playlist_types">
+			  <li>
+			    <%=playlist.type%>
+			    <br>
+			    <br>
+			    <%=link_to "Add Songs", new_playlist_song_path(playlist)%>
+			    <%=link_to "View your Songs", playlist_songs_path(playlist)%>
+			    <br>
+			    <%=link_to "Add Photos", new_playlist_photo_path(playlist)%>
+			    <%=link_to "View your Photos", playlist_photos_path(playlist)%>
+			  </li>
+			</ul>
+			</ul>
+		<%end%>
+				
+</div>
+
+

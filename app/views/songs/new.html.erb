@@ -1,0 +1,8 @@
+<h1>Add your Songs here</h1><h2>Upload a new MP3:</h2>
+<p>
+  <%= form_for @song, url: playlist_songs_path, html: { multipart: true } do |f| %>
+  <%= f.file_field :song %>
+  </br>
+  <%=f.submit%>
+  </p>
+<% end %>
