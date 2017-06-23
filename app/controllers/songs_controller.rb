@@ -7,10 +7,9 @@ class SongsController < ApplicationController
   def new
     @song= Song.new
   end
-  
+
   def create
     @song = @playlist.songs.create(song_params)
-    debugger
     if @song.save
       flash[:success] = "Song is Added!"
       redirect_to playlists_path
@@ -22,7 +21,7 @@ class SongsController < ApplicationController
   def song_params
     params.require(:song).permit(:song)
   end
-  
+
   def set_playlist
     @playlist = Playlist.find(params[:playlist_id])
   end
