@@ -3,4 +3,7 @@ class UsersController < ApplicationController
   end
   def test2
   end
+  def testing
+    puts "deeksha master"
+  end
 end
