@@ -4,6 +4,6 @@ class UsersController < ApplicationController
   def test2
   end
   def testing
-    puts "Checking master"
+    puts "Checking master 2"
   end
 end
